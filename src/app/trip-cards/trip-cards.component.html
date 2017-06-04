@@ -1,0 +1,10 @@
+<md-card *ngFor="let trip of trips | async">
+    <md-card-header>
+        <md-card-title>{{ trip }}</md-card-title>
+        <md-card-subtitle>This is the sub</md-card-subtitle>
+    </md-card-header>
+    <md-card-actions>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>
