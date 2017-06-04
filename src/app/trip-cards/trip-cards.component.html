@@ -1,10 +1,13 @@
-<md-card *ngFor="let trip of trips | async">
+<md-card *ngFor="let trip of trips">
     <md-card-header>
-        <md-card-title>{{ trip }}</md-card-title>
-        <md-card-subtitle>This is the sub</md-card-subtitle>
+        <md-card-title>{{ trip.tripname }}</md-card-title>
+        <!--<md-card-subtitle>{{ trip.start_date }}</md-card-subtitle>-->
     </md-card-header>
+    <md-card-content>
+        <p>{{ trip.start_date }}</p>
+        <p>{{ trip.end_date }}</p>
+    </md-card-content>
     <md-card-actions>
-        <button md-button>LIKE</button>
-        <button md-button>SHARE</button>
+        <button md-button>View Trip Details</button>
   </md-card-actions>
 </md-card>

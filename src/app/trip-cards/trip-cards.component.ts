@@ -9,7 +9,8 @@ import 'rxjs/add/operator/toPromise';
   styleUrls: ['./trip-cards.component.css']
 })
 export class TripCardsComponent implements OnInit {
-  trips: Observable<any[]>;
+  // trips: Observable<any[]>;
+  trips: {}
   
   constructor(private _tripsService: TripsService) { }
 
@@ -19,11 +20,13 @@ export class TripCardsComponent implements OnInit {
     //     console.log(err)
     //   })
 
-     this.trips = this._tripsService.getTrips()
-    .catch((err) => { 
-        console.log(err);  // don't do this, show user a message
-        return Observable.of(true)
-    }); 
+    //  this.trips = this._tripsService.getTrips()
+    // .catch((err) => { 
+    //     console.log(err);  // don't do this, show user a message
+    //     return Observable.of(true)
+    // }); 
+
+    this.trips = this._tripsService.myTrips;
   }
 
 }

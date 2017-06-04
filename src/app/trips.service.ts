@@ -25,6 +25,27 @@ export class TripsService {
         console.log(err);
         return Observable.throw(err);
     }
+
+    myTrips = [
+      {
+        id: 1,
+        tripname: 'Canada',
+        start_date: new Date('2017-09-20'),
+        end_date: new Date('2017-09-30')
+      },
+      {
+        id: 2,
+        tripname: 'New York City',
+        start_date: new Date('2017-12-15'),
+        end_date: new Date('2017-12-20')
+      },
+      {
+        id: 3,
+        tripname: 'Palm Springs',
+        start_date: new Date('2018-01-10'),
+        end_date: new Date('2018-01-13')
+      }
+    ]
   
 
 }
