@@ -31,19 +31,46 @@ export class TripsService {
         id: 1,
         tripname: 'Canada',
         start_date: new Date('2017-09-20'),
-        end_date: new Date('2017-09-30')
+        end_date: new Date('2017-09-23')
       },
       {
         id: 2,
         tripname: 'New York City',
         start_date: new Date('2017-12-15'),
-        end_date: new Date('2017-12-20')
+        end_date: new Date('2017-12-16')
+      },
+    ]
+
+    myDays = [
+      {
+        id: 1,
+        date: new Date('2017-09-20'),
+        trip_id: 1
+      },
+      {
+        id: 2,
+        date: new Date('2017-09-21'),
+        trip_id: 1
       },
       {
         id: 3,
-        tripname: 'Palm Springs',
-        start_date: new Date('2018-01-10'),
-        end_date: new Date('2018-01-13')
+        date: new Date('2017-09-22'),
+        trip_id: 1
+      },
+      {
+        id: 4,
+        date: new Date('2017-09-23'),
+        trip_id: 1
+      },
+      {
+        id: 5,
+        date: new Date('2017-12-15'),
+        trip_id: 2
+      },
+      {
+        id: 6,
+        date: new Date('2017-12-16'),
+        trip_id: 2
       }
     ]
   
