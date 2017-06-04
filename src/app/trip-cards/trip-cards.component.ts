@@ -8,7 +8,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'trip-cards',
   templateUrl: './trip-cards.component.html',
-  styleUrls: ['./trip-cards.component.css']
+  styleUrls: ['./trip-cards.component.css'],
 })
 export class TripCardsComponent implements OnInit {
   // trips: Observable<any[]>;
@@ -29,6 +29,7 @@ export class TripCardsComponent implements OnInit {
     // }); 
 
     this.trips = this._tripsService.myTrips;
+
   }
 
 }

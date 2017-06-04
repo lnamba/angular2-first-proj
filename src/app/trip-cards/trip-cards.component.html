@@ -1,13 +1,11 @@
-<md-card *ngFor="let trip of trips">
-    <md-card-header>
-        <md-card-title>{{ trip.tripname }}</md-card-title>
-        <!--<md-card-subtitle>{{ trip.start_date }}</md-card-subtitle>-->
-    </md-card-header>
-    <md-card-content>
-        <p>{{ trip.start_date }}</p>
-        <p>{{ trip.end_date }}</p>
-    </md-card-content>
-    <md-card-actions>
-        <button md-button routerLink="/{{trip.id}}/days">View Trip Details</button>
-  </md-card-actions>
-</md-card>
+<h1>My Trips</h1>
+
+<ngb-accordion #acc="ngbAccordion" activeIds="config-panel-one" *ngFor="let trip of trips">
+  <ngb-panel title="{{ trip.tripname }}" id="config-panel-{{ trip.id }}">
+    <ng-template ngbPanelContent>
+      {{ trip.start_date | date }} - 
+      {{ trip.end_date | date }}
+      <button class="btn btn-info" routerLink="/{{ trip.id }}/days">View Trip Details</button>  
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
